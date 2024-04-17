@@ -26,8 +26,8 @@ const isPalindrome = (num) => {
 
 // event handler
 const handleInput = () => {
-  // convert string to int
-  const num = parseInt(document.getElementById("userInput").value);
+  // convert string to float
+  const num = parseFloat(document.getElementById("userInput").value);
 
   // get the result element to display the message
   const resultText = document.getElementById("resultText");
