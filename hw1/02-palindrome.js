@@ -1,17 +1,17 @@
 // function to check if num in a palindrome or not
 const isPalindrome = (num) => {
   // convert num to string for indexing
-  var numString = num.toString();
+  let numString = num.toString();
 
   // left pointer
-  var left = 0;
+  let left = 0;
 
   // right pointer starting at end of num
-  var right = numString.length - 1;
+  let right = numString.length - 1;
 
   // left and right pointers both iterate towards each other while checking each character of num
   while (left <= right) {
-    if (numString[left] == numString[right]) {
+    if (numString[left] === numString[right]) {
       left += 1;
       right -= 1;
     } else {
