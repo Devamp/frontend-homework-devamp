@@ -26,15 +26,33 @@ const isPalindrome = (num) => {
 
 // event handler
 const handleInput = () => {
-  // convert string to float
-  const num = parseFloat(document.getElementById("userInput").value);
+  // get user response as string
+  const numString = document.getElementById("userInput").value;
 
   // get the result element to display the message
   const resultText = document.getElementById("resultText");
 
-  if (isNaN(num) || num < 0) {
-    // check if value is invalid or not a number
-    resultText.textContent = "Invalid Input. Please enter a positive integer.";
+  // check if response is a floating point value
+  if (numString.includes(".")) {
+    resultText.textContent =
+      "Invalid Floating Value. Please enter a whole integer.";
+    resultText.className = "text-danger";
+    return;
+  }
+
+  // if reponse is empty (or text), prompt user for a valid input
+  if (numString === "") {
+    resultText.textContent = "Please enter a valid input!";
+    resultText.className = "text-danger";
+    return;
+  }
+
+  // convert response num to integer
+  const num = parseInt(numString);
+
+  // check if response is empty or not a number
+  if (num < 0 || isNaN(num)) {
+    resultText.textContent = "Invalid Input. Please enter a positive integer";
     resultText.className = "text-danger";
     return;
   }
