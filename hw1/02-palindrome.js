@@ -51,7 +51,7 @@ const handleInput = () => {
   const num = parseInt(numString);
 
   // check if response is empty or not a number
-  if (num < 0 || isNaN(num)) {
+  if (num < 0 || isNaN(num) || numString.includes("-")) {
     resultText.textContent = "Invalid Input. Please enter a positive integer";
     resultText.className = "text-danger";
     return;
