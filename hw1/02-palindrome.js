@@ -24,6 +24,21 @@ const isPalindrome = (num) => {
   return true;
 };
 
+// function to update the UI
+const updateUI = (num) => {
+  // check if num in palindrome
+  const status = isPalindrome(num);
+
+  // display status accordingly
+  if (status) {
+    resultText.textContent = "Yes. This is a palindrome!";
+    resultText.className = "text-success";
+  } else {
+    resultText.textContent = "No. Try again!";
+    resultText.className = "text-danger";
+  }
+};
+
 // event handler
 const handleInput = () => {
   // get user response as string
@@ -57,17 +72,8 @@ const handleInput = () => {
     return;
   }
 
-  // check if num in palindrome
-  const status = isPalindrome(num);
-
-  // display status accordingly
-  if (status) {
-    resultText.textContent = "Yes. This is a palindrome!";
-    resultText.className = "text-success";
-  } else {
-    resultText.textContent = "No. Try again!";
-    resultText.className = "text-danger";
-  }
+  // update the UI with the correct status
+  updateUI(num);
 };
 
 // input field element
