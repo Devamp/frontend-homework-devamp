@@ -104,7 +104,7 @@ const handleClick = () => {
 //  clear any cards being displayed in the container
 const clearSearch = () => {
   if (characterContainer.children.length > 0) {
-    characterContainer.innerHTML = "";
+    characterContainer.textContent = "";
   }
 };
 
