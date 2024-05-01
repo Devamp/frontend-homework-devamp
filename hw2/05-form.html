@@ -7,14 +7,115 @@
     <title>05 - Form</title>
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" />
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    />
     <script defer src="05-form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .h1 {
+        font-weight: 600;
+      }
+    </style>
   </head>
-  <body>
-    <main>
-      <form>
-        <h1>Exercise 05 - Form</h1>
+  <body style="background-color: #28242c">
+    <main
+      class="container col-lg-6 col-md-8 col-sm-10 col-12 mt-4 mb-5 p-4 d-flex flex-column bg-white rounded"
+    >
+      <form id="studentForm">
+        <h1 class="h1 fs-2 text-center mb-4">Exercise 05 - Form</h1>
+
+        <div class="mb-3">
+          <label class="d-block mb-1 fw-bold" for="name">Full Name:</label>
+          <input type="text" id="name" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+          <label class="d-block mb-1 fw-bold" for="email">Email:</label>
+          <input type="email" id="email" class="form-control" required />
+        </div>
+
+        <div class="mb-3">
+          <label class="d-block mb-1 fw-bold" for="registrationStatus"
+            >Registration Status:</label
+          >
+          <select class="form-select mb-3" id="registrationStatus">
+            <option value="Status not selected">Choose an Option</option>
+            <option value="Registered">Registered</option>
+            <option value="Wait-listed">Wait-listed</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <p class="d-block mb-1 fw-bold">
+          Have you taken any of the following courses?
+        </p>
+
+        <div class="form-check">
+          <label class="form-check-label" for="PL">Programming Languages</label>
+          <input type="checkbox" class="form-check-input" id="PL" />
+        </div>
+
+        <div class="form-check">
+          <label class="form-check-label" for="OS">Operating Systems</label>
+          <input type="checkbox" class="form-check-input" id="OS" />
+        </div>
+
+        <div class="mb-3 form-check">
+          <label class="form-check-label" for="FS"
+            >Full Stack Web Development</label
+          >
+          <input type="checkbox" class="form-check-input" id="FS" />
+        </div>
+
+        <div class="mb-3">
+          <label class="d-block mb-1 fw-bold" for="additionalNotes"
+            >Anything else?</label
+          >
+          <textarea
+            id="additionalNotes"
+            class="form-control"
+            rows="3"
+          ></textarea>
+
+          <div class="d-flex mt-4">
+            <button
+              type="submit"
+              class="btn btn-primary form-control me-2"
+              id="submitButton"
+            >
+              Submit
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary form-control"
+              id="resetButton"
+            >
+              Reset
+            </button>
+          </div>
+        </div>
       </form>
+
+      <!--Source: https://getbootstrap.com/docs/4.0/components/modal/-->
+      <div class="modal" tabindex="-1" role="dialog" id="formModal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2 class="modal-title">Form Data</h2>
+            </div>
+            <div class="modal-body" id="modal-body"></div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                id="closeModalButton"
+              >
+                Ok
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>
