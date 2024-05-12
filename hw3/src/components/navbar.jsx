@@ -13,7 +13,7 @@ const Navbar = () => {
                   <a href={`/population`}>Population</a>
               </li>
               <li className="hover:underline">
-                  <a href={`/myroute`}>Custom-Route</a>
+                  <a href={`/gdp`}>GDP</a>
               </li>
           </ul>
       </nav>

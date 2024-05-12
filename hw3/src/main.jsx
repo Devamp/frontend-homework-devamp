@@ -9,6 +9,7 @@ import "./index.css";
 import Home from './routes/home'
 import List from './routes/list';
 import Population from './routes/population'
+import GDP from './routes/gdp'
 import ErrorPage from './error-page'
 
 const router = createBrowserRouter([
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/population",
     element: <Population />,
+  },
+  {
+    path: "/gdp",
+    element: <GDP />,
   },
 ]);
 
