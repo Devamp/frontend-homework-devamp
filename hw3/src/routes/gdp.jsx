@@ -79,6 +79,8 @@ const PieChart = () => {
         },
     };
 
+    
+
     return (
         <div className="mt-5 m-auto flex flex-col items-center p-5 w-full max-w-lg bg-slate-800 rounded-2xl shadow-lg shadow-black">
             <p className="text-center text-xl font-mono text-white">The pie chart below showcases the total GDP (in billions) makeup of countries in South America.</p>

@@ -100,7 +100,7 @@ const BuildChart = ({ data }) => {
 
     return (
         <div className="bg-slate-800 text-white p-5 w-3/4 rounded shadow-lg shadow-black">            
-            <p className="font-mono text-bold text-2xl text-center">South American Population</p>
+            <h1 className="font-mono text-bold text-2xl text-center">South American Population</h1>
             <Bar data={chartData} options={chartOptions}/>
         </div>
     );

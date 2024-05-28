@@ -11,7 +11,7 @@ const Card = ({country}) => {
     return (
         <div className="bg-slate-700 shadow-lg shadow-black rounded-lg h-auto mb-5 p-3">
             <div className="title bg-white font-bold text-2xl rounded text-center">
-                <p>{country['name']}</p>
+                <h1>{country['name']}</h1>
             </div>
             <div className="flag mt-5">
                 <img src={country['flag_png']} alt={country['flag_alt'] || 'Data not avaliable.'} className="mt-2  mx-auto max-w-full" style={{ width: '200px', height: '125px' }} />
